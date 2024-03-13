@@ -30,7 +30,11 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+
   font-family: SpaceGrotesk;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
 }
 
 h1 {
