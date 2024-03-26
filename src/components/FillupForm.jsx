@@ -54,7 +54,7 @@ export default function FillupForm() {
 
 const CardFillUpStyled = styled.form`
   width: 375px;
-  padding: 0 0 45px;
+  padding: 40px 0 45px;
 
   display: flex;
   flex-direction: column;
@@ -65,6 +65,7 @@ const CardFillUpStyled = styled.form`
   label {
     width: 140px;
     font-size: 12px;
+    margin-left: 25px;
     font-weight: 500;
     letter-spacing: 2px;
     padding: 0px 45px 10px 0px;
@@ -75,6 +76,7 @@ const CardFillUpStyled = styled.form`
   input {
     width: 327px;
     height: 45px;
+    margin: 9px 0 0;
     border-radius: 8px;
     border: solid 1px #dfdee0;
     background-color: #fff;
@@ -92,7 +94,7 @@ const CardFillUpStyled = styled.form`
   button {
     width: 327px;
     height: 53px;
-    margin: 28px 0 0;
+    margin: auto;
     padding: 15px 130px 15px 129px;
     border-radius: 8px;
     background-color: #21092f;
