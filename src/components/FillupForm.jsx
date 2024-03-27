@@ -8,7 +8,7 @@ export default function FillupForm() {
   const handleChange = (event) => {
     const name = event.target.name;
     const cardNumber = event.target.value;
-    setInputs((values) => ({ ...values, [name]: value }));
+    setInputs((values) => ({ ...values, [name]: values }));
   };
 
   const handleSubmit = (event) => {
@@ -63,7 +63,6 @@ const CardFillUpStyled = styled.form`
   gap: 10px;
 
   label {
-    width: 140px;
     font-size: 12px;
     margin-left: 25px;
     font-weight: 500;
@@ -71,6 +70,7 @@ const CardFillUpStyled = styled.form`
     padding: 0px 45px 10px 0px;
     text-align: left;
     color: #21092f;
+    text-transform: uppercase;
   }
 
   input {
