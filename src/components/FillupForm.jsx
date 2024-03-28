@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import InputMask from "react-input-mask";
 import styled from "styled-components";
 
 export default function FillupForm() {
@@ -39,7 +40,7 @@ export default function FillupForm() {
       <div className="datendcvc-div">
         <label htmlFor="exp-date">
           Exp. Date (MM/YY)
-          <input type="number" placeholder="MM" onChange={handleChange} />
+          <inputMask mask="12" placeholder="MM" onChange={handleChange} />
           <input type="number" placeholder="YY" onChange={handleChange} />
         </label>
         <label htmlFor="cvc">
