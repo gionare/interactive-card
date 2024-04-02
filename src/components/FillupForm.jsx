@@ -2,20 +2,20 @@ import React, { useState } from "react";
 import InputMask from "react-input-mask";
 import styled from "styled-components";
 
-export default function FillupForm() {
-  const [inputs, setInputs] = useState({});
-
+export default function FillupForm({ inputs, setInputs }) {
   // https://www.w3schools.com/react/react_forms.asp
   const handleChange = (event) => {
     const name = event.target.name;
-    const cardNumber = event.target.value;
-    setInputs((values) => ({ ...values, [name]: values }));
+    const inputValue = event.target.value;
+    setInputs((values) => ({ ...values, [name]: inputValue }));
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     alert(inputs);
   };
+
+  console.log(inputs);
 
   return (
     <CardFillUpStyled onSubmit={handleSubmit}>
@@ -30,7 +30,10 @@ export default function FillupForm() {
       </label>
       <label htmlFor="card-number">
         Card Number
-        <input
+        <InputMask
+          maskChar={null} //prevent underlines
+          mask={"9999 9999 9999 9999"}
+          name="cardNumber"
           type="text"
           placeholder="e.g. 1234 5678 9123 0000"
           value={inputs.cardNumbers}
@@ -86,6 +89,13 @@ const CardFillUpStyled = styled.form`
     border-radius: 8px;
     border: solid 1px #dfdee0;
     background-color: #fff;
+    font-family: SpaceGrotesk;
+    width: 220px;
+    height: 23px;
+    opacity: 0.25;
+    font-size: 18px;
+    font-weight: 500;
+    color: #21092f;
   }
   .datendcvc-div {
     display: flex;

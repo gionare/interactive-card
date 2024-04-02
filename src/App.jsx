@@ -4,10 +4,12 @@ import FillupForm from "./components/FillupForm";
 import HeaderLiveCard from "./components/HeaderLiveCard";
 
 function App() {
+  const [inputs, setInputs] = useState({ cardNumber: "" });
+
   return (
     <>
-      <HeaderLiveCard></HeaderLiveCard>
-      <FillupForm></FillupForm>
+      <HeaderLiveCard inputs={inputs} />
+      <FillupForm inputs={inputs} setInputs={setInputs} />
     </>
   );
 }
