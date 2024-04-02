@@ -63,6 +63,11 @@ const CardFillUpStyled = styled.form`
   background-color: #fff;
   gap: 10px;
 
+  label:first-of-type {
+    // Apply margin-top to the first label
+    margin-top: 40px;
+  }
+
   label {
     font-size: 12px;
     margin-left: 25px;

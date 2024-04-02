@@ -4,11 +4,14 @@ import styled from "styled-components";
 export default function HeaderLiveCard() {
   return (
     <Livecards>
-      <div class="relative">
+      <div className="relative">
         <img src="public/images/bg-main-mobile.png" alt="" />
 
-        <div classname="absolute-image">
+        <div className="absolute-card-back">
           <img src="public/images/bg-card-back.png" alt="" />
+        </div>
+        <div className="absolute-card-front">
+          <img src="public/images/bg-card-front.png" alt="" />
         </div>
       </div>
     </Livecards>
@@ -19,12 +22,23 @@ const Livecards = styled.div`
   .relative {
     position: relative;
   }
-  .absolute-image {
+  .absolute-card-back {
     position: absolute;
-    top: 80px;
-    right: 0;
-    width: 100px;
-    height: 100px;
-    border: 3px solid #73ad21;
+    top: 30px;
+    left: 70px;
+    /* border: 3px solid #73ad21; */
+  }
+  .absolute-card-back img {
+    width: 280px;
+    height: 157px;
+  }
+  .absolute-card-front {
+    position: absolute;
+    top: 120px;
+    left: 20px;
+  }
+  .absolute-card-front img {
+    width: 280px;
+    height: 157px;
   }
 `;
