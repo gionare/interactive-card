@@ -4,26 +4,19 @@ import styled from "styled-components";
 export default function HeaderLiveCard() {
   return (
     <Livecards>
-      <div>
-        <img
-          className="relative-image"
-          src="public/images/bg-main-mobile.png"
-          alt=""
-        />
-      </div>
-      <div>
-        <img
-          classname="absolute-image"
-          src="public/images/bg-card-back.png"
-          alt=""
-        />
+      <div class="relative">
+        <img src="public/images/bg-main-mobile.png" alt="" />
+
+        <div classname="absolute-image">
+          <img src="public/images/bg-card-back.png" alt="" />
+        </div>
       </div>
     </Livecards>
   );
 }
 
 const Livecards = styled.div`
-  .relative-image {
+  .relative {
     position: relative;
   }
   .absolute-image {
